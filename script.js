@@ -254,3 +254,49 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Contact form submission handling
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill all fields.');
+      return;
+    }
+
+    // ===== CONFIGURE: set your WhatsApp number (no +, country code included) and your email =====
+    const OWNER_WHATSAPP_NUMBER = '918296833381'; // e.g. 918296833381
+    const OWNER_EMAIL = 'narensonu1520@gmail.com';
+    // ==============================================================================================
+
+    const body = `Hi, I got your message from the website.%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
+
+    // Open WhatsApp chat with your number and prefilled message
+    const waUrl = `https://wa.me/${OWNER_WHATSAPP_NUMBER}?text=${body}`;
+
+    // Mailto fallback (opens email client)
+    const mailto = `mailto:${OWNER_EMAIL}?subject=${encodeURIComponent('Website contact from ' + name)}&body=${decodeURIComponent(body)}`;
+
+    // Ask user which app to use
+    const choice = confirm('Send via WhatsApp? OK = WhatsApp, Cancel = Email');
+
+    if (choice) {
+      // open WhatsApp (if on desktop will open WhatsApp Web)
+      window.open(waUrl, '_blank');
+    } else {
+      // open default email client
+      window.location.href = mailto;
+    }
+
+    // Optionally clear form
+    form.reset();
+  });
+});
