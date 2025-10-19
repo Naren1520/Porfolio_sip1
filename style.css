@@ -52,12 +52,52 @@ body {
     padding: 0.5rem 0;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #3498db;
+.navigation button {
+  background: linear-gradient(45deg, #4dda1a, #e81cd7, #0066ff);
+  background-size: 300% 300%;
+  border: none;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  animation: navGradient 5s ease infinite;
 }
 
-/* Main Content - Starts after header */
+@keyframes navGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navigation button:hover,
+.navigation button.active {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(224, 26, 198, 0.7);
+}
+
+/* .navigation button {
+    background: black;
+    border: greenyellow;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+} */
+
+.nav-link:hover,
+.nav-link.active {
+    color: #df14ba;
+}
+
+/* .navigation button:hover,
+.navigation button.active {
+    background-color: #120f24;
+} */
+
+/* Main Content */
 .main-content {
     margin-top: 80px;
     min-height: calc(100vh - 80px);
@@ -390,7 +430,9 @@ body {
     width: 100%;
     padding: 0.9rem;
     border: 2px solid #ecf0f1;
-    background-color: black;
+    background-color: rgb(6, 6, 6);
+    color: white;
+    font-weight: 500;
     border-radius: 5px;
     font-size: 1rem;
     font-family: inherit;
@@ -421,7 +463,7 @@ body {
 }
 
 .submit-button:hover {
-    background-color: #2980b9;
+    background-color: #4626e7;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
@@ -436,7 +478,7 @@ body {
 
 .social-title {
     font-size: 1.8rem;
-    color: #f0f1f2;
+    color: #d6d6d6;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -455,12 +497,12 @@ body {
     background-color: black;
     border-radius: 8px;
     text-decoration: none;
-    color: #d617b7;
+    color: #df1bc2;
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
-    background-color: #b779e4;
+    background-color: #200b2f;
     color: rgb(6, 209, 67);
     transform: translateX(5px);
 }
@@ -497,11 +539,12 @@ body {
 }
 
 .social-link:hover .social-icon {
-  color: #0077b5; /* Default hover color */
+  color: #452de1; /* Default hover color */
 }
 
 .social-link:hover {
-  color: #0077b5;
+  color: #452de1;
+  font-weight: 600;
 }
 
 
@@ -541,6 +584,12 @@ body {
 
     .navigation {
         gap: 1rem;
+    }
+    .navigation button {
+        padding: 2px 6px;
+        font-size: 0.9rem;
+        padding: 3px 8px;
+    border-radius: 10px;
     }
 
     .hero-title {

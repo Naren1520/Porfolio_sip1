@@ -255,6 +255,8 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+
+
 // Contact form submission handling
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
@@ -272,10 +274,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // ===== CONFIGURE: set your WhatsApp number (no +, country code included) and your email =====
-    const OWNER_WHATSAPP_NUMBER = '918296833381'; // e.g. 918296833381
+    //  CONFIGURE: WhatsApp number (no +, country code) and  email 
+    const OWNER_WHATSAPP_NUMBER = '918296833381'; 
     const OWNER_EMAIL = 'narensonu1520@gmail.com';
-    // ==============================================================================================
 
     const body = `Hi, I got your message from the website.%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
 
