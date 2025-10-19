@@ -17,7 +17,7 @@
       width: 100%;
       overflow: hidden;
       font-family: 'Poppins', sans-serif;
-      background-color: #000; /* fallback */
+      background-color: #000;
     }
 
     #vanta-bg {
@@ -90,7 +90,6 @@
         }
     }
 
-    /* Media Queries for larger screens */
     @media screen and (min-width: 1024px) {
       .loader-content {
         padding: 0 40px;
@@ -116,7 +115,7 @@
   <div id="vanta-bg"></div>
   <div class="loader-content">
     <div class="logo-container">
-        <img src="assets/logo.png" alt="Naren Logo" class="logo">
+        <img src="assets/MyImg1.jpg" alt="Naren Logo" class="logo">
     </div>
     <h1>Naren S J</h1>
     <p>Information Science Engineer</p>
@@ -124,11 +123,11 @@
 
   <!-- VANTA + THREE.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
 
   <script>
-    // Initialize VANTA Birds effect
-    let vantaEffect = VANTA.BIRDS({
+    // Initialize VANTA Waves effect
+    let vantaEffect = VANTA.WAVES({
       el: "#vanta-bg",
       mouseControls: true,
       touchControls: true,
@@ -137,13 +136,17 @@
       minWidth: 200.00,
       scale: 1.0,
       scaleMobile: 1.0,
-      backgroundColor: 0xb0b,
-      color1: 0x311919
+      color: 0x0,
+      shininess: 50,
+      waveHeight: 20,
+      waveSpeed: 1
     });
+
+    // Redirect after 4 seconds
     setTimeout(() => {
       if (vantaEffect) vantaEffect.destroy();
       window.location.href = "main.html";
-    }, 2000);
+    }, 3000);
   </script>
 
 </body>
