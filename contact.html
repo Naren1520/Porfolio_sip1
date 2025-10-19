@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naren</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cursor.css">
     <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -14,7 +15,10 @@
 <body>
     <header class="header">
         <div class="nav-container">
-            <div class="logo">Naren S J</div>
+            <div class="logo">
+                <img src="assets/logo.png" alt="Naren Logo">
+                Naren S J
+            </div>
             <nav class="navigation">
                 <a href="index.html" class="nav-link active"><button>Home</button></a>
                 <a href="about.html" class="nav-link"><button>About</button></a>
@@ -89,5 +93,11 @@
     </main>
 <script src="common.js"></script>
     <script src="script.js"></script>
+    <script src="cursor.js" defer></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            new CustomCursor();
+        });
+    </script>
 </body>
 </html>

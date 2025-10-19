@@ -1,0 +1,49 @@
+body {
+    cursor: none;
+    background-color: #0d0d0d;
+}
+
+/* Core cursor elements */
+.cursor-dot,
+.cursor-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    will-change: transform, opacity;
+}
+
+/* Small neon dot */
+.cursor-dot {
+    width: 10px;
+    height: 10px;
+    background: linear-gradient(45deg, #ff3ec1, #3ec1ff);
+    box-shadow: 0 0 10px #ff3ec1, 0 0 20px #3ec1ff;
+}
+
+/* Outer glowing ring */
+.cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #60f217;
+    box-shadow: 0 0 25px #60f21788;
+    opacity: 0.7;
+}
+
+/* Hover effect on clickable elements */
+.cursor-hover .cursor-dot {
+    transform: scale(1.8);
+    background: linear-gradient(45deg, #00ffe5, #ff00a6);
+    box-shadow: 0 0 15px #00ffe5, 0 0 30px #ff00a6;
+}
+
+.cursor-hover .cursor-outline {
+    transform: scale(2.2);
+    opacity: 0.5;
+    border-color: #ff00a6;
+    box-shadow: 0 0 30px #ff00a6, 0 0 60px #ff00a6;
+}
