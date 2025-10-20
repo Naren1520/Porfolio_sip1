@@ -4,11 +4,11 @@
 A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript. Features a sleek design with animated backgrounds, custom cursor effects, and smooth transitions.
 
 ## Features
-- 🎨 Animated loader page with VANTA.js waves background
-- 🖱️ Custom cursor effect (desktop only)
-- 📱 Fully responsive design
-- 🌊 Interactive wave animations
-- 🎯 Sections for:
+- Animated loader page with VANTA.js waves background
+- Custom cursor effect (desktop only)
+- Fully responsive design
+- Interactive wave animations
+- Sections for:
   - Home
   - About
   - Projects
@@ -21,20 +21,6 @@ A modern, responsive personal portfolio website built with HTML, CSS, and JavaSc
 - JavaScript
 - VANTA.js
 - Three.js
-
-## Setup and Installation
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/portfolio.git
-```
-
-2. Navigate to project directory
-```bash
-cd portfolio
-```
-
-3. Open the project in a web browser
-- Double click on `index.html` or use a local server
 
 ## Project Structure
 ```
@@ -69,8 +55,6 @@ portfolio/
 
 ### Loader Page
 - Custom animated entrance with VANTA.js waves
-- Circular profile picture with pulse animation
-- Smooth transition to main content
 
 ### Custom Cursor
 - Available on desktop devices only
@@ -87,9 +71,7 @@ portfolio/
 Feel free to submit issues and enhancement requests.
 
 ## Contact
-Naren S J - [Your Email]
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details
+Naren S J - narensonu1520@gmail.com
+- LinkedIn: https://www.linkedin.com/in/narensj20/
+- GitHub: https://github.com/Naren1520
+- view live: narensj.netlify.app
